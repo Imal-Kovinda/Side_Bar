@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <script>
+        function addPayments(){
+            document.getElementById('show').innerHTML="Add your Payments";
+            //coloR();
+            TransitionEvent(0.5);
+            
+        }
+        function paidAmount(){
+            document.getElementById('show').innerHTML="You Paid Amount";
+            //coloR();
+            TransitionEvent(0.5);
+            document.getElementById('butt').style.backgroundColor = '#6f7599';
+        }
+        function remainignBalance(){
+            document.getElementById('show').innerHTML="Your Remaining Balance";
+            TransitionEvent(3);
+            //coloR();
+        }
+        // function coloR(){
+            
+        // }
+        
+    </script>
+    <section>
+        <div class="top">
+            <img src="image/IMG-20210823-WA0007.jpg" id="logo" alt="logo" width="110" height="50">
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <!-- <i class="fas fa-bars" id="btn"></i> -->
+            <img src="image/menu.png"  id="btn" alt="menu" width="20" height="20">
+            <img src="image/cancel2.png"  id="cancel" alt="canl" width="20" height="20">
+        </label>
+        <div class="sidebar">
+            <!-- <header>Menu</header> -->
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Event calendar</a></li>
+                <li><a href="#">Sessions</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Student list</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- include -->
+            <h2 id="topic">Payments</h2>
+            <ul>
+                
+                <li><button id="butt" onclick="addPayments()">Add Payments</button></li>
+                <li><button id="butt" onclick="paidAmount()">Paid Amount</button></li>
+                <li><button id="butt" onclick="remainignBalance()">Remaining Balance</button></li>
+            </ul>
+            <div id="show">
+                <table>
+                    <td class="title">
+                        <tr >Date</tr>
+                        <tr>Time</tr>
+                        <tr>NIC</tr>
+                        <tr>Amount</tr>
+                    </td>
+                </table>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>
